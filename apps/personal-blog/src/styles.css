@@ -1,4 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* You can add global styles to this file, and also import other style files */
+
+@layer base {
+  p {
+    @apply font-paragraph;
+  }
+
+  h1 {
+    @apply text-6xl;
+    @apply font-bold;
+    @apply font-title;
+  }
+
+  h2 {
+    @apply text-5xl;
+    @apply font-bold;
+    @apply font-title;
+  }
+
+  h3 {
+    @apply text-4xl;
+    @apply font-bold;
+    @apply font-title;
+  }
+
+  h4 {
+    @apply text-3xl;
+    @apply font-bold;
+    @apply font-title;
+  }
+
+  h5 {
+    @apply text-2xl;
+    @apply font-bold;
+    @apply font-title;
+  }
+
+  hr {
+    @apply w-1/6;
+    @apply my-4;
+    @apply border-gray-700;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+
+  li {
+    @apply font-paragraph;
+  }
+
+  a {
+    @apply text-blue-500;
+  }
+
+  a:hover {
+    @apply underline;
+  }
+}

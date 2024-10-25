@@ -11,7 +11,12 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        paragraph: ['Cactus Classical Serif', 'serif'],
+        title: ['Lora', 'serif'],
+      },
+    },
   },
   plugins: [],
 };
