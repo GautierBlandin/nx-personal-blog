@@ -1,1 +1,1 @@
-export * from './lib/web-articles';
+export { Article } from './lib/web-articles';

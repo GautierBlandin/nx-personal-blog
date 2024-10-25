@@ -1,9 +1,12 @@
-import NxWelcome from './nx-welcome';
+import { Route, Routes } from 'react-router-dom';
+import Home from './home';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="personal-blog" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
