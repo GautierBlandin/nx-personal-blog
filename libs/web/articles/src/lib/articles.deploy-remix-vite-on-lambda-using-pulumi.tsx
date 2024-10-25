@@ -19,7 +19,7 @@ export function DeployRemixViteOnLambda() {
         <meta name="description" content="A blog about software engineering" />
       </Helmet>
       <div className="mt-12 mb-12 ml-2 mr-2" ref={contentRef}>
-        <Article content={'<div>hello world</div>'} />
+        <Article articleLink={'/content/deployRemixViteOnAwsWithPulumi.html'} />
       </div>
     </div>
   );
