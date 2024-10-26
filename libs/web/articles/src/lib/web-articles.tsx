@@ -6,6 +6,7 @@ import 'prismjs/components/prism-json.js';
 import 'prismjs/plugins/toolbar/prism-toolbar.min.css';
 import 'prismjs/plugins/toolbar/prism-toolbar.min.js';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js';
+import { Markdown } from './Markdown';
 
 export const Article = ({ articleLink }: { articleLink: string }) => {
   const [content, setContent] = useState<string>('');
@@ -25,5 +26,7 @@ export const Article = ({ articleLink }: { articleLink: string }) => {
     fetchArticle();
   }, [articleLink]);
 
-  return <div dangerouslySetInnerHTML={{ __html: content }} />;
+  if (!content) return null;
+
+  return <Markdown content={content} />;
 };

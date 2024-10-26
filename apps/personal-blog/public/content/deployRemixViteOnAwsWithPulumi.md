@@ -1,5 +1,3 @@
-Here's the HTML converted to Markdown:
-
 # Deploying Remix-Vite on Lambda using Pulumi
 
 ---
@@ -36,7 +34,7 @@ npm run build
 The build directory now has the following content:
 
 ```
-  ├── client
+├── client
 │   ├── assets
 │   │   ├── _index-B17S9f7F.js
 │   │   ├── components-BAmE7OwT.js
