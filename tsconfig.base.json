@@ -16,7 +16,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-personal-blog/articles": ["libs/content/articles/src/index.ts"],
       "@nx-personal-blog/web-articles": ["libs/web/articles/src/index.ts"]
     }
   },
