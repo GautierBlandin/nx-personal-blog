@@ -1,7 +1,7 @@
 import { cn } from '../cn';
 
 export const Paragraph = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return <div className={cn(className)}>{children}</div>;
+  return <p className={cn(className)}>{children}</p>;
 };
 
 export const paragraph = {
