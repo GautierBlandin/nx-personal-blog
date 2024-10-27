@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-personal-blog/navigation": ["libs/web/navigation/src/index.ts"],
       "@nx-personal-blog/storybook-host": [
         "libs/web/storybook-host/src/index.ts"
       ],
