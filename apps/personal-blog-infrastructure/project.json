@@ -5,22 +5,27 @@
   "sourceRoot": "apps/personal-blog-infrastructure/src",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/js:swc",
-      "outputs": ["{options.outputPath}"],
+    "deploy": {
+      "executor": "nx:run-commands",
       "options": {
-        "main": "apps/personal-blog-infrastructure/src/main.ts",
-        "outputPath": "dist/apps/personal-blog-infrastructure",
-        "tsConfig": "apps/personal-blog-infrastructure/tsconfig.app.json"
-      }
+        "command": "pulumi up",
+        "cwd": "./apps/infrastructure"
+      },
+      "cwd": "./apps/infrastructure",
+      "dependsOn": [
+        {
+          "target": "build",
+          "project": "personal-blog"
+        }
+      ]
     },
-    "serve-static": {
-      "executor": "@nx/web:file-server",
-      "dependsOn": ["build"],
+    "down": {
+      "executor": "nx:run-commands",
       "options": {
-        "buildTarget": "personal-blog-infrastructure:build",
-        "spa": true
-      }
+        "command": "pulumi down",
+        "cwd": "./apps/infrastructure"
+      },
+      "cwd": "./apps/infrastructure"
     }
   }
 }
