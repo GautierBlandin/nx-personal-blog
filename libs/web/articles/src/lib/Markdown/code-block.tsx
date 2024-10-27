@@ -52,19 +52,16 @@ export const CodeBlock: FC<Props> = memo(({ language, children }) => {
   }, [isIconChecked]);
 
   return (
-    <div className="flex flex-col -mx-9 p-0 px-10">
-      <div className="flex items-center justify-end">
-        <Button
-          variant={'ghost'}
-          size={'sm'}
-          title="Copy text"
-          className="justify-right flex gap-2"
-          onClick={handleButtonClick}
-        >
-          <span className="text-xs text-muted-foreground">Copy {language}</span>
-          {isIconChecked ? <CheckIcon size={16} /> : <ClipboardIcon size={16} />}
-        </Button>
-      </div>
+    <div className="relative group">
+      <Button
+        variant={'ghost'}
+        size={'sm'}
+        title="Copy code"
+        className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity text-white hover:text-white"
+        onClick={handleButtonClick}
+      >
+        {isIconChecked ? <CheckIcon size={16} /> : <ClipboardIcon size={16} />}
+      </Button>
 
       <Prism language={language} style={customStyle} PreTag="pre">
         {children}
