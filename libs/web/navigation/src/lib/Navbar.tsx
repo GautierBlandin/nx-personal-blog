@@ -4,18 +4,18 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="flex justify-center space-x-8 py-4">
+    <nav className="flex justify-center space-x-8 py-12">
       <Link
         to="/"
         className={`text-neutral-emphasis hover:underline ${location.pathname === '/' ? 'underline' : ''}`}
       >
-        <h4>Home</h4>
+        <h5>Home</h5>
       </Link>
       <Link
         to="/articles"
-        className={`text-neutral-emphasis hover:underline ${location.pathname.startsWith('/articles') ? 'underline' : ''}`}
+        className={`text-neutral-emphasis hover:underline ${location.pathname === '/articles' ? 'underline' : ''}`}
       >
-        <h4>Articles</h4>
+        <h5>Articles</h5>
       </Link>
     </nav>
   );
