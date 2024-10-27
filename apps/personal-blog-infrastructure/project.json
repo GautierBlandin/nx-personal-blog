@@ -9,9 +9,8 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pulumi up",
-        "cwd": "./apps/infrastructure"
+        "cwd": "apps/personal-blog-infrastructure"
       },
-      "cwd": "./apps/infrastructure",
       "dependsOn": [
         {
           "target": "build",
@@ -23,9 +22,8 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pulumi down",
-        "cwd": "./apps/infrastructure"
-      },
-      "cwd": "./apps/infrastructure"
+        "cwd": "apps/personal-blog-infrastructure"
+      }
     }
   }
 }
