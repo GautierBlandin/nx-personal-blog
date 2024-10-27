@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Markdown } from './markdown';
-import { withContainer } from './container';
+import { withContainer } from '@nx-personal-blog/storybook-host';
 
 const meta: Meta<typeof Markdown> = {
   component: Markdown,
