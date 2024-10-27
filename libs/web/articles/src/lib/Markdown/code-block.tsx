@@ -63,7 +63,7 @@ export const CodeBlock: FC<Props> = memo(({ language, children }) => {
         {isIconChecked ? <CheckIcon size={16} /> : <ClipboardIcon size={16} />}
       </Button>
 
-      <Prism language={language} style={customStyle} PreTag="pre">
+      <Prism language={language} style={customStyle} PreTag="pre" className="rounded-md">
         {children}
       </Prism>
     </div>
