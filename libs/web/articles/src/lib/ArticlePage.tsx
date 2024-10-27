@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet';
 import { Article } from './Article';
+import { WithNavbar } from '@nx-personal-blog/navigation';
 
-export const ArticlePage = ({ articleLink, title, description }: { articleLink: string, title: string, description: string }) => {
+const ArticlePageContent = ({ articleLink, title, description }: { articleLink: string, title: string, description: string }) => {
   return (
     <div className="max-w-3xl mx-auto">
       <Helmet>
@@ -14,3 +15,5 @@ export const ArticlePage = ({ articleLink, title, description }: { articleLink: 
     </div>
   );
 };
+
+export const ArticlePage = WithNavbar(ArticlePageContent);

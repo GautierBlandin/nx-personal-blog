@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { WithNavbar } from '@nx-personal-blog/navigation';
 
-export default function Home() {
+const HomeContent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -9,4 +10,6 @@ export default function Home() {
   }, [navigate]);
 
   return null;
-}
+};
+
+export default WithNavbar(HomeContent);
