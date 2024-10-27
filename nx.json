@@ -61,6 +61,11 @@
   "targetDefaults": {
     "e2e-ci--**/*": {
       "dependsOn": ["^build"]
+    },
+    "@nx/js:swc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {
@@ -79,6 +84,12 @@
         "linter": "eslint",
         "unitTestRunner": "vitest"
       }
+    },
+    "@nx/web:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "vitest",
+      "e2eTestRunner": "none"
     }
   }
 }
