@@ -6,8 +6,7 @@
 
 [Remix](https://remix.run/) is a very cool React-based framework that makes the final jump back from the browser to the server. After
 starting with SPAs that fully ran in the browser, [Next.js](https://nextjs.org/) got the idea of rendering React components in the server,
-reducing the initial load time and improving SEO.
-<br/>
+reducing the initial load time and improving SEO.  
 Remix takes a different approach to rendering and data fetching compared to Next.js.
 While Next.js requires you to decide which pages should be statically generated,
 server-rendered, or fetch data on the client-side,
@@ -15,8 +14,7 @@ Remix treats everything as a server-rendered route by default.
 This means that with Remix, you don't need to think about the distinction
 between server-side and client-side components. You just write React code,
 and Remix handles the optimal rendering strategy for you, leading
-to faster loading times for dynamic content without the need for explicit configuration.
-<br/><br/>
+to faster loading times for dynamic content without the need for explicit configuration.  
 In this article, we're going to initialize a Remix project, build it, and write all the infrastructure code needed to deploy it to AWS.
 
 ---
@@ -586,11 +584,7 @@ I recommend encapsulating this in a single build-deploy script:
   "build-deploy": "remix vite:build && node build.cjs && cd infrastructure && pulumi up"
 }
 ```
-
-<br/>
-
 ---
-
 ## Recap and next steps
 
 In this article, we've learned how to:
