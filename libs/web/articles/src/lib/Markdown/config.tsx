@@ -2,7 +2,8 @@ import { Config } from '@markdoc/markdoc';
 import { fence } from './code-block';
 import { paragraph } from './paragraph';
 import { list } from './list';
-import { heading } from './heading'; // Add this import
+import { heading } from './heading';
+import { separator } from './separator';
 
 export const markdownConfig: Config = {
   nodes: {
@@ -10,5 +11,6 @@ export const markdownConfig: Config = {
     fence,
     list,
     heading,
+    hr: separator,
   },
 };

@@ -5,6 +5,7 @@ import { markdownConfig } from './config';
 import { Paragraph } from './paragraph';
 import { List } from './list';
 import { Heading } from './heading';
+import { Separator } from './separator';
 
 interface Props {
   content: string;
@@ -20,7 +21,7 @@ export const Markdown: FC<Props> = (props) => {
   return (
     <>
       {Markdoc.renderers.react(content, React, {
-        components: { Paragraph, CodeBlock, List, Heading },
+        components: { Paragraph, CodeBlock, List, Heading, Separator },
       })}
     </>
   );
