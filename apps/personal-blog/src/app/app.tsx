@@ -11,6 +11,11 @@ export function App() {
         title="Deploying Remix-Vite on Lambda using Pulumi"
         description="Gautier Blandin - A blog about software engineering"
       />} />
+      <Route path="/articles" element={<ArticlePage
+        articleLink="/content/articles.md"
+        title="Gautier Blandin - A blog about software engineering"
+        description="Gautier Blandin - A blog about software engineering"
+      />} />
     </Routes>
   );
 }
