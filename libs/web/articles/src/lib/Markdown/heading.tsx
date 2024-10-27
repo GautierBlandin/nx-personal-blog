@@ -11,12 +11,12 @@ export const Heading: React.FC<HeadingProps> = ({ children, level, className }) 
   const Component = `h${level}` as keyof JSX.IntrinsicElements;
 
   const styles = {
-    h1: 'text-4xl font-bold mb-4',
-    h2: 'text-3xl font-semibold mb-3',
-    h3: 'text-2xl font-medium mb-2',
-    h4: 'text-xl font-medium mb-2',
-    h5: 'text-lg font-medium mb-1',
-    h6: 'text-base font-medium mb-1',
+    h1: 'text-6xl font-bold font-title mb-4',
+    h2: 'text-5xl font-bold font-title mb-4',
+    h3: 'text-4xl font-bold font-title mb-2',
+    h4: 'text-3xl font-bold font-title mb-2',
+    h5: 'text-2xl font-bold font-title',
+    h6: 'text-xl font-bold font-title',
   };
 
   return <Component className={cn(styles[`h${level}`], className)}>{children}</Component>;
