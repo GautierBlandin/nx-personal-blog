@@ -9,9 +9,7 @@ const ArticlePageContent = ({ articleLink, title, description }: { articleLink: 
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <div className="mt-12 mb-12 ml-2 mr-2">
-        <Article articleLink={articleLink} />
-      </div>
+      <Article articleLink={articleLink} />
     </div>
   );
 };
