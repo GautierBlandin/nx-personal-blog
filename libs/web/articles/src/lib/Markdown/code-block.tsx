@@ -26,12 +26,12 @@ const customStyle = {
   'code[class*="language-"]': {
     ...darcula['code[class*="language-"]'],
     fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
-    fontSize: '0.9rem', // Adjust this value to make the font smaller
+    fontSize: '0.9rem',
   },
   'pre[class*="language-"]': {
     ...darcula['pre[class*="language-"]'],
     fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
-    fontSize: '0.9rem', // Adjust this value to make the font smaller
+    fontSize: '0.9rem',
   },
 };
 
@@ -42,6 +42,8 @@ export const CodeBlock: FC<Props> = memo(({ language, children }) => {
     navigator.clipboard.writeText(children);
     setIsIconChecked(true);
   };
+
+  const buttonColor = darcula['code[class*="language-"]']?.color as string;
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -57,7 +59,8 @@ export const CodeBlock: FC<Props> = memo(({ language, children }) => {
         variant={'ghost'}
         size={'sm'}
         title="Copy code"
-        className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity text-white hover:text-white"
+        className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity"
+        style={{ color: buttonColor }}
         onClick={handleButtonClick}
       >
         {isIconChecked ? <CheckIcon size={16} /> : <ClipboardIcon size={16} />}
