@@ -54,7 +54,7 @@ export const CodeBlock: FC<Props> = memo(({ language, children }) => {
   }, [isIconChecked]);
 
   return (
-    <div className="relative group">
+    <div className="relative group py-2">
       <Button
         variant={'ghost'}
         size={'sm'}
