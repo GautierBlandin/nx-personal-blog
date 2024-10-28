@@ -45,7 +45,7 @@ The processing business logic gets properly updated and tested to support this n
 code is deployed in production, some users complain that they get an error when they try to generate reports. Indeed, the
 developer forgot to update the `formatTransaction` function to handle the new variant!
 
-How did this issue get shipped ?
+How did this issue get shipped ?  
 - Existing regression tests passed, as customers not making use of the new transaction type were not affected
 - The issue was not on a business-critical path on which testing focused when the new feature was added
 
@@ -63,7 +63,7 @@ function formatTransaction(transaction: Transaction): string {
     // Existing cases...
     default:
       assertUnreachable(transaction);
-      //                ^ Type Error: 'payment' is not assignable to type never.
+                       // ^ Type Error: 'payment' is not assignable to type never.
   }
 }
 ```
