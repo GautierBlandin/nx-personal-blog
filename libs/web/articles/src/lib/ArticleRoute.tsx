@@ -11,7 +11,7 @@ export function ArticleRoute({ article }: { article: Article }) {
   );
 }
 
-function articleToArticlePageProps(article: Article): ArticlePageProps {
+export function articleToArticlePageProps(article: Article): ArticlePageProps {
   return {
     articleLink: articleContentPath(article.identifier),
     title: article.title,
