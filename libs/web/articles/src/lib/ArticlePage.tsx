@@ -2,7 +2,13 @@ import { Helmet } from 'react-helmet';
 import { Article } from './Article';
 import { WithNavbar } from '@nx-personal-blog/navigation';
 
-const ArticlePageContent = ({ articleLink, title, description }: { articleLink: string, title: string, description: string }) => {
+export interface ArticlePageProps {
+  articleLink: string;
+  title: string;
+  description: string;
+}
+
+const ArticlePageContent = ({ articleLink, title, description }: ArticlePageProps) => {
   return (
     <div className="flex justify-center mx-4">
       <div className="max-w-3xl w-full">
