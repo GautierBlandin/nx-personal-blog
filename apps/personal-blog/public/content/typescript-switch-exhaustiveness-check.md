@@ -11,9 +11,9 @@ type Transaction =
 ```
 
 In addition to the main business logic that handles the processing
-of transactions, there is a feature that enables the users to view
+of transactions, there is a feature that enables users to generate
 a PDF report of their recent transactions. This feature uses a `formatTransaction` function
-to present the transactions in a human-readable format:
+to present the transactions in a human-readable way:
 
 ```typescript
 function formatTransaction(transaction: Transaction): string {
