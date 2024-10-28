@@ -6,7 +6,7 @@ export const WithNavbar = <P extends object>(
 ) => {
   const WithNavbarComponent: React.FC<P> = (props) => {
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen pb-16">
         <Navbar />
         <main className="flex-grow">
           <WrappedComponent {...props} />
