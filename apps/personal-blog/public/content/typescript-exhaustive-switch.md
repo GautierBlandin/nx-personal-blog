@@ -18,11 +18,11 @@ to present the transactions in a human-readable format:
 ```typescript
 function formatTransaction(transaction: Transaction): string {
   switch (transaction.kind) {
-    case "Deposit":
+    case "deposit":
       return `Deposited ${transaction.amount} to account ${transaction.accountId}`;
-    case "Withdrawal":
+    case "withdrawal":
       return `Withdrew ${transaction.amount} from account ${transaction.accountId} at ATM ${transaction.atmId}`;
-    case "Transfer":
+    case "transfer":
       return `Transferred ${transaction.amount} from account ${transaction.fromAccountId} to account ${transaction.toAccountId}`;
     default:
       throw new Error("Unknown transaction type");
@@ -57,6 +57,7 @@ function formatTransaction(transaction: Transaction): string {
     // Existing cases...
     default:
       assertUnreachable(transaction);
+      //                ^ Type Error: 'payment' is not assignable to type never.
   }
 }
 ```
