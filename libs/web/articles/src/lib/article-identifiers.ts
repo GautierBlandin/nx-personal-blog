@@ -1,6 +1,3 @@
-export const deployRemixViteOnAwsWithPulumi = 'deploy-remix-vite-on-aws-with-pulumi';
-export const typescriptSwitchExhaustivenessCheck = 'typescript-switch-exhaustiveness-check';
-
 export interface Article {
   identifier: string;
   title: string;
