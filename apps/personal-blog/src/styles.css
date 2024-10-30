@@ -32,9 +32,7 @@
   }
 
   hr {
-    @apply w-1/6;
-    @apply my-4;
-    @apply border-gray-700;
+    @apply w-1/5 my-8 border-gray-700;
   }
 
   ul {
