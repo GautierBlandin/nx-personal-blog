@@ -10,7 +10,11 @@ export const NavbarLayout: React.FC<NavbarLayoutProps> = ({ children }) => {
     <div className="flex flex-col min-h-screen pb-16">
       <Navbar />
       <main className="flex-grow">
-        {children}
+        <div className="flex justify-center mx-4">
+          <div className="max-w-3xl w-full">
+            {children}
+          </div>
+        </div>
       </main>
     </div>
   );

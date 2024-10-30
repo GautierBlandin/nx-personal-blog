@@ -9,14 +9,23 @@ export function Home() {
           Hey, I'm Gautier, and I love building things!
         </p>
         <p>
-          I'm a software engineer at <a href="https://trackit.io/">TrackIt</a>, where I work on full-stack web development
+          I'm a software engineer at <a href="https://trackit.io/">TrackIt</a>, where I work on full-stack web
+          development
           and cloud stuff with AWS.
         </p>
+        <hr />
         <h5> Recent articles </h5>
         <ul>
-          { Object.values(articles)
+          {Object.values(articles)
             .slice(0, 5)
-            .map((article) => <li key={article.identifier}><a href={articleRoute(article.identifier)}>{article.title}</a></li>)}
+            .map((article) => <li key={article.identifier}><a
+              href={articleRoute(article.identifier)}>{article.title}</a></li>)}
+        </ul>
+        <hr />
+        <h5>Socials</h5>
+        <ul>
+          <li><a href="https://github.com/gautierblandin">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/gautier-blandin-661640138/">LinkedIn</a></li>
         </ul>
       </div>
     </NavbarLayout>
