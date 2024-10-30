@@ -19,3 +19,20 @@ export const articles = {
     date: '2024-06-15',
   }
 } satisfies Record<string, Article>;
+
+export function articleToArticlePageProps(article: Article) {
+  return {
+    articleLink: articleContentPath(article.identifier),
+    title: article.title,
+    description: article.description,
+  };
+}
+
+export function articleContentPath(articleIdentifier: string) {
+  return `/content/${articleIdentifier}.md`;
+}
+
+export function articleRoute(articleIdentifier: string) {
+  return `/articles/${articleIdentifier}`;
+}
+
