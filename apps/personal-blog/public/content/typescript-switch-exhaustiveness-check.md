@@ -41,13 +41,13 @@ type Transaction =
   | { kind: 'payment'; amount: number; fromAccountId: string; merchantId: string }
 ```
 
-The processing business logic gets properly updated and tested to support this new kind of transaction. However, after the
+The transaction processing business logic gets properly updated and tested to support the new payment transaction. However, after the
 code is deployed in production, some users complain that they get an error when they try to generate reports. Indeed, the
 developer forgot to update the `formatTransaction` function to handle the new variant!
 
 How did this issue get shipped ?  
 - Existing regression tests passed, as customers not making use of the new transaction type were not affected
-- The issue was not on a business-critical path on which testing focused when the new feature was added
+- The issue was not on a business-critical path on which testing focused when the new feature was added. Oops!
 
 Fortunately, typescript enables us to add a static type-check that would have prevented it. The `never` type
 is a type that represents the empty set of values, meaning that nothing can be assigned to it. We can use this
