@@ -35,8 +35,16 @@
     @apply w-1/5 my-8 border-gray-700;
   }
 
+  ul, ol {
+    @apply pl-10 py-2;
+  }
+
   ul {
-    @apply list-disc list-inside;
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
   }
 
   li {

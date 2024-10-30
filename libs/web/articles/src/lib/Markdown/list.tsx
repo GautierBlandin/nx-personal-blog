@@ -1,5 +1,4 @@
 import React from 'react';
-import { cn } from '../cn';
 
 export const List = ({
   children,
@@ -12,7 +11,7 @@ export const List = ({
 }) => {
   const Component = ordered ? 'ol' : 'ul';
   return (
-    <Component className={cn(className, 'pl-10', 'py-2', ordered ? 'list-decimal' : 'list-disc')}>{children}</Component>
+    <Component className={className}>{children}</Component>
   );
 };
 
