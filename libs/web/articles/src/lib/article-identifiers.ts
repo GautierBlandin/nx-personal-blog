@@ -35,4 +35,3 @@ export function articleContentPath(articleIdentifier: string) {
 export function articleRoute(articleIdentifier: string) {
   return `/articles/${articleIdentifier}`;
 }
-

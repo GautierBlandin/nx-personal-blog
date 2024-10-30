@@ -1,2 +1,2 @@
 export * from './lib/Navbar';
-export * from './lib/WithNavbar';
+export * from './lib/NavbarLayout';

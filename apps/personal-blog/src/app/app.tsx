@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './home';
 import {
   ArticlePage,
   articleRoute,
   articles,
   articleToArticlePageProps
 } from '@nx-personal-blog/web-articles';
+import { Home } from '@nx-personal-blog/home';
 
 export function App() {
 
