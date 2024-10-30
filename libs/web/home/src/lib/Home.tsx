@@ -27,6 +27,11 @@ export function Home() {
           <li><a href="https://github.com/gautierblandin">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/gautier-blandin-661640138/">LinkedIn</a></li>
         </ul>
+        <hr />
+        <h5>Contact</h5>
+        <p>
+          Feel free to reach out to me at: <a href="mailto:gautier.blandin.dev@gmail.com">gautier.blandin.dev@gmail.com</a>
+        </p>
       </div>
     </NavbarLayout>
   );
