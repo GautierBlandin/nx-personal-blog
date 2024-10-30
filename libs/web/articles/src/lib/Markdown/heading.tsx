@@ -1,5 +1,4 @@
 import React from 'react';
-import { cn } from '../cn';
 
 interface HeadingProps {
   children: React.ReactNode;
@@ -10,16 +9,7 @@ interface HeadingProps {
 export const Heading: React.FC<HeadingProps> = ({ children, level, className }) => {
   const Component = `h${level}` as keyof JSX.IntrinsicElements;
 
-  const styles = {
-    h1: 'text-6xl font-bold font-title mb-8',
-    h2: 'text-5xl font-bold font-title mb-4',
-    h3: 'text-4xl font-bold font-title mb-2',
-    h4: 'text-3xl font-bold font-title mb-2',
-    h5: 'text-2xl font-bold font-title',
-    h6: 'text-xl font-bold font-title',
-  };
-
-  return <Component className={cn(styles[`h${level}`], className)}>{children}</Component>;
+  return <Component className={className}>{children}</Component>;
 };
 
 export const heading = {
