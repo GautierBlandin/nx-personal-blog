@@ -9,7 +9,7 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pulumi up",
-        "cwd": "apps/personal-blog-infrastructure"
+        "cwd": "{projectRoot}"
       },
       "dependsOn": [
         {
@@ -22,7 +22,7 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pulumi down",
-        "cwd": "apps/personal-blog-infrastructure"
+        "cwd": "{projectRoot}"
       }
     }
   }
