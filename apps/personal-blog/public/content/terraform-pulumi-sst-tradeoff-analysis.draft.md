@@ -3,7 +3,7 @@
 When starting a new project, it is always necessary to define how the software solution will be deployed [Think of a different intro phrase. That one is not catchy]. The industry has widely [is this usage correct ?]
 adopted Infrastructure as Code (IaC) as the standard, but choosing the appropriate tool can be difficult.
 
-In this article, I look at three popular tools for writing infrastructure code and which one I would recommend based on the circumstances of the team. First, though, let's start from the basics.
+In this article, I look at three popular tools for writing infrastructure code and which one I would recommend based on the circumstances of the team. First, let's start with some basics.
 
 ## What is Infrastructure as Code?
 
@@ -81,6 +81,22 @@ SST uses the Pulumi engine under the hood to manage and provision resources, and
 - SST has its own CLI and can't be connected to Pulumi Cloud. While SST offers their own monitoring solution (the SST Console), it is far from feature-parity with Pulumi Cloud.
 
 ## Star rating summary
+
+Note: For SST, most ratings are given under the assumption that AWS Serverless is chosen as the main infrastructure technology.
+
+| Feature                     | Terraform | Pulumi | SST   |
+|-----------------------------|-----------|--------|-------|
+| Variety of provider support | ★★★★★     | ★★★★   | ★★    |
+| Developer experience        | ★★★       | ★★★★   | ★★★★★ |
+| Language expressiveness     | ★★★       | ★★★★★  | ★★★★★ |
+| High-level APIs             | ★         | ★      | ★★★★  |
+| Documentation quality       | ★★★★★     | ★★★★   | ★★★   |
+| Testability                 | ★★★       | ★★★★★  | ★★★★  |
+| Observability               | ★★★       | ★★★★   | ★★★   |
+| Modularity                  | ★★★       | ★★★★★  | ★★★★  |
+| Enterprise-readiness        | ★★★★★     | ★★★★   | ★★    |
+| Secret Management           | ★★★★      | ★★★★★  | ★★★★★ |
+| Auditability                | ★★★       | ★★★★★  | ★     |
 
 ## Choosing the appropriate tool
 
