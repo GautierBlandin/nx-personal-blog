@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply text-paragraph;
+  }
+
   p {
-    @apply font-paragraph;
+    @apply font-paragraph text-paragraph;
   }
 
   h1 {
