@@ -9,7 +9,7 @@ export function Home() {
         <div className="flex justify-center mx-4">
           <div className="max-w-6xl w-full">
             <div>
-              <p>Hey, I'm Gautier, and I love building things!</p>
+              <p>Hey, I'm Gautier, welcome to my blog!</p>
               <p>
                 I'm a software engineer at{' '}
                 <a href="https://trackit.io/">TrackIt</a>, where I work on
