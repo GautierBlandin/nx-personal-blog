@@ -8,7 +8,7 @@ export interface Article {
   date: string; // YYYY-MM-DD
 }
 
-export const articles = {
+export const articles: Record<string, Article> = {
   terraformPulumiSstTradeoffAnalsys: {
     identifier: 'terraform-pulumi-sst-tradeoff-analysis',
     title: 'Terraform vs Pulumi vs SST',
@@ -31,7 +31,7 @@ export const articles = {
       'A technical tutorial for deploying a Remix-Vite app on AWS using Pulumi.',
     date: '2024-06-15',
   },
-} satisfies Record<string, Article>;
+};
 
 export function articleToArticlePageProps(article: Article): ArticlePageProps {
   return {
