@@ -1,5 +1,3 @@
-# Terraform vs Pulumi vs SST: A tradeoffs analysis
-
 Defining a deployment strategy is a key concern for any new software project. While Infrastructure as Code (IaC) has become the industry standard for provisioning and managing cloud infrastructure, the growing ecosystem of tools makes
 selecting the optimal solution increasingly challenging.
 

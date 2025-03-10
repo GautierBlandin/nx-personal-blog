@@ -1,5 +1,3 @@
-# Use the never type to check for exhaustiveness
-
 Imagine that you're writing a banking application. You handle deposits, withdrawals, and transfers. To model this,
 you've created a `Transaction` discriminated union type:
 

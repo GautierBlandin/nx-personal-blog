@@ -19,7 +19,7 @@ export const articles = {
   },
   typescriptSwitchExhaustivenessCheck: {
     identifier: 'typescript-switch-exhaustiveness-check',
-    title: 'Check switch statement exhaustiveness with typescript',
+    title: 'Check switch statement exhaustiveness with Typescript',
     description:
       'A technical tutorial for checking switch statement exhaustiveness with typescript.',
     date: '2024-10-28',
