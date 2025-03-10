@@ -8,19 +8,19 @@
   }
 
   h1 {
-    @apply text-5xl font-bold font-title mb-8;
+    @apply text-5xl font-bold font-title pb-16;
   }
 
   h2 {
-    @apply text-4xl font-bold font-title my-4;
+    @apply text-4xl font-bold font-title py-8;
   }
 
   h3 {
-    @apply text-3xl font-bold font-title my-2;
+    @apply text-3xl font-bold font-title py-4;
   }
 
   h4 {
-    @apply text-2xl font-bold font-title my-2;
+    @apply text-2xl font-bold font-title py-4;
   }
 
   h5 {
@@ -32,7 +32,7 @@
   }
 
   hr {
-    @apply w-1/5 my-8 border-gray-700;
+    @apply w-1/5 mt-8 border-gray-700;
   }
 
   ul, ol {
@@ -57,5 +57,30 @@
 
   a:hover {
     @apply underline;
+  }
+
+  /* Table styling */
+  table {
+    @apply w-full my-4 border-collapse font-paragraph;
+  }
+
+  thead {
+    @apply bg-gray-100;
+  }
+
+  th {
+    @apply px-4 py-3 border border-gray-300 text-left font-bold;
+  }
+
+  td {
+    @apply px-4 py-2 border border-gray-300;
+  }
+
+  tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+
+  tbody tr:hover {
+    @apply bg-gray-100;
   }
 }
