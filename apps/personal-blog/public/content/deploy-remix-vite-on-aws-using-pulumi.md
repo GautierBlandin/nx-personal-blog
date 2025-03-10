@@ -1,9 +1,5 @@
 # Deploying Remix-Vite on Lambda using Pulumi
 
----
-
-## A bit of context
-
 [Remix](https://remix.run/) is a very cool React-based framework that makes the final jump back from the browser to the server. After
 starting with SPAs that fully ran in the browser, [Next.js](https://nextjs.org/) got the idea of rendering React components in the server,
 reducing the initial load time and improving SEO.  
