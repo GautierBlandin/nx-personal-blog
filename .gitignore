@@ -4,6 +4,7 @@
 dist
 tmp
 /out-tsc
+storybook-static
 
 # dependencies
 node_modules
@@ -43,4 +44,5 @@ Thumbs.db
 
 **/vite.config.{js,ts,mjs,mts,cjs,cts}.timestamp*
 
-storybook-static
+# Local files
+active.md
