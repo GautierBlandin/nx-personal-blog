@@ -11,7 +11,7 @@ export const Banner: React.FC<BannerProps> = ({ title, subtitle }) => {
       <div className="mx-auto max-w-8xl w-full">
         <div className="flex flex-col justify-center">
           <h1 className="text-white py-0">{title}</h1>
-          {subtitle && <h3 className="text-white">{subtitle}</h3>}
+          {subtitle && <h4 className="text-white">{subtitle}</h4>}
         </div>
       </div>
     </div>
