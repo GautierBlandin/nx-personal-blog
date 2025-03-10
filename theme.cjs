@@ -38,8 +38,11 @@ module.exports = {
     'error-primary': globalColors.error[300],
   },
   fontFamily: {
-    paragraph: ['Inter', 'sans-serif'],
+    paragraph: ['Lora', 'sans-serif'],
     title: ['Bitter', 'serif'],
+  },
+  fontSize: {
+    paragraph: '18px',
   },
   maxWidth: {
     '8xl': '90rem', // 1440px
