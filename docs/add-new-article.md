@@ -1,0 +1,2 @@
+- Add the article body as a markdown file in `apps/personal-blog/content`
+- Add the article object to ```articles``` in `libs/web/articles/src/lib/article-identifiers.ts`
