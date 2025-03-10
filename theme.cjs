@@ -38,7 +38,7 @@ module.exports = {
     "error-primary": globalColors.error[300],
   },
   fontFamily: {
-    paragraph: ['Cactus Classical Serif', 'serif'],
-    title: ['Lora', 'serif'],
+    paragraph: ['Inter', 'sans-serif'],
+    title: ['Bitter', 'serif'],
   },
 };
