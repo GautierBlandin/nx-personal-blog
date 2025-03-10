@@ -18,7 +18,7 @@ export const NavbarLayout: React.FC<NavbarLayoutProps> = ({ children, title, des
       <Navbar />
       <main className="flex-grow">
         <div className="flex justify-center mx-4">
-          <div className="max-w-3xl w-full">
+          <div className="max-w-6xl w-full">
             {children}
           </div>
         </div>
