@@ -13,7 +13,7 @@ export function Home() {
               <p>
                 I'm a software engineer at{' '}
                 <a href="https://trackit.io/">TrackIt</a>, where I work on
-                full-stack web development and cloud stuff with AWS.
+                full-stack web development and cloud architecture using AWS.
               </p>
               <hr />
               <h5> Recent articles </h5>
