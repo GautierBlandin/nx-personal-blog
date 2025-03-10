@@ -24,11 +24,11 @@
   }
 
   h5 {
-    @apply text-xl font-bold font-title;
+    @apply text-xl font-bold font-title py-4;
   }
 
   h6 {
-    @apply text-xl font-bold font-title;
+    @apply text-xl font-bold font-title py-4;
   }
 
   hr {
