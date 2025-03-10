@@ -22,7 +22,7 @@ export const Article = ({ articleLink }: { articleLink: string }) => {
   if (!content) return null;
 
   return (
-    <div>
+    <div className="max-w-6xl w-full">
       <Markdown content={content} />
     </div>
   );
