@@ -13,47 +13,48 @@ Just like there many programming languages were created over time to address evo
 - Variety of cloud of provider support
 - Ecosystem maturity (quality of documentation and training material, integration capabilities)
 - Developer experience (deployment speed, local development capabilities, language syntax familiarity)
+- Modularity (ability to define and reuse infrastructure components)
 - Testability
 - Observability (monitoring of deployed resources, deployment metrics)
 - Security (secret management, compliance checking, auditability)
-- Modularity (ability to define and reuse infrastructure components)
 
 ## Terraform
 
-Terraform was created in 2014 by HashiCorp. It enables users to define infrastructure using a purpose-built [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language), HCL. Terraform supports virtually all cloud
+Terraform is an IaC tool created in 2014 by HashiCorp. It enables users to define infrastructure using a purpose-built [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language), HCL. Terraform supports virtually 
+all cloud
 providers and benefits from a widespread adoption in the DevOps community. Terraform uses a declarative approach where users define the desired end state, and its [state files](https://developer.hashicorp.com/terraform/language/state)
 track the real-world resources to determine what changes are needed during deployments.
 
-### Strengths
+#### Strengths
 - Being used by many large organisations, Terraform has demonstrated enterprise-readiness and is a proven technology.
 - Terraform supports virtually all cloud providers, making it one of the most versatile IaC tools.
 - The official documentation is comprehensive, with a wealth of examples and tutorials.
 - Terraform has an active community and a large adoption, making experienced practitioners easier to find. Additionally, HashiCorp offers certifications that may help in the vetting process.
 
-### Challenges
+#### Challenges
 
 - Terraform requires the use of HCL and specialized Terraform-specific knowledge and tooling. This encourages a Software Engineer vs DevOps Specialist divide, which is increasingly seen as hindering productivity, especially in smaller
   teams.
-- Terraform code is harder to keep DRY, and sometimes lack useful features available in more expressive programming languages.
+- Terraform code is harder to keep DRY, and HCL sometimes lacks useful features available in more expressive programming languages.
 
 ## Pulumi
 
 Pulumi was created in 2017 by former Microsoft employees, and went open-source in 2018. It enables users to define infrastructure using mainstream programming languages (Typescript, Python, Java, and more). Like Terraform, Pulumi supports a
 wide variety of cloud providers, and benefits from a growing popularity. It also uses a declarative approach of comparing desired and actual state.
 
-### Strengths
+#### Strengths
 
-- By supporting mainstream programming languages, Pulumi encourages tighter integration of DevOps practices in fullstack teams. Language familiarity facilitates software engineers taking part in infrastructure definition. Additionally,
-  the use of programming languages facilitates IDE support and strong static typing.
+- By supporting mainstream programming languages, Pulumi encourages tighter integration of DevOps practices in fullstack teams. Language familiarity facilitates software engineers taking part in infrastructure definition. 
+- The use of programming languages enables powerful developer tooling advantages, including IDE support and strong static typing.
 - High testability with both unit testing, property testing, and integration testing being available.
-- High modularity through native language constructs, as code reuse is powered by all the usual mechanisms of abstraction, including functions, inheritance, and composition.
-- Although less extensive than Terraform's provider ecosystem, Pulumi supports a wide array of cloud providers. Additionally, Terraform providers can be bridged to be used with Pulumi and provide missing functionality.
-- Secrets are encrypted in state files.
+- High modularity through native language constructs, as code reuse is powered by the full spectrum of abstraction techniques available in modern programming.
+- Although less extensive than Terraform's provider ecosystem, Pulumi supports a wide array of cloud providers. Additionally, Terraform providers can be bridged to be usence, and compositid with Pulumi and provide missing functionality.
+- Secrets can be securely encrypted directly in state files, rather than stored in a separate secrets management service.
 - Pulumi Cloud provides strong observability and auditability features.
 
-### Challenges
+#### Challenges
 
-- While there is growing adoption and support for Pulumi, the documentation and examples are not nearly as comprehensive as that of Terraform. While writing Pulumi code, I often find myself looking at Terraform documentation and
+- While there is growing adoption and support for Pulumi, the documentation and examples are not nearly as comprehensive as that of Terraform. Even while writing Pulumi code, I often find myself looking at Terraform documentation and
   examples to figure out how to do things.
 - The high flexibility provided by programming languages makes it easier for teams with a weaker software engineering culture to shoot themselves in the foot and write hard-to-maintain code.
 - All languages supported by Pulumi have feature-parity, but users reports a smoother experience with Typescript and Python, especially on the documentation side.
@@ -66,17 +67,17 @@ services and aims at improving development speed by providing high-level, opinio
 amount of engineering effort and infrastructure code using low-level components through Terraform or Pulumi, SST treats it as a single declarable resource. Additionally, SST comes with a powerful Live Lambda feature, enabling hot-reload
 of AWS Lambda functions during development by proxying calls to a local deployment.
 
-SST uses the Pulumi engine under the hood to manage and provision resources, and lets users write Pulumi code in addition to SST's constructs, enabling resources with no associated SST constructs to still be defined and deployed.
+SST uses the Pulumi engine under the hood to manage and provision resources, and lets users write Pulumi code in addition to using SST's constructs, enabling resources with no associated SST constructs to still be defined and deployed.
 
-### Strengths
+#### Strengths
 
 - Opinionated, high-level APIs that dramatically reduce development effort for supported patterns.
 - Hot-reload for lambda functions provide a very fast feedback loop for serverless backend developers.
 
-### Challenges
+#### Challenges
 
 - Exclusively supports Typescript as the language for infrastructure code.
-- Although extensible through Pulumi code, SST constructs are narrowly focused on AWS serverless.
+- Although SST is extensible through Pulumi code, SST constructs themselves are narrowly focused on AWS serverless.
 - Relatively new and small, with limited documentation and community adoption.
 - SST has its own CLI and can't be connected to Pulumi Cloud. While SST offers their own monitoring solution (the SST Console), it is far from achieving feature-parity with Pulumi Cloud.
 
@@ -121,7 +122,7 @@ For each tool, I've highlighted the characteristics of projects where I think it
 
 - Longer-term project
 - Medium to high risk projects
-- Little constraint for infrastructure requirement, although provider support must be verified for lesser-known cloud services
+- Most infrastructure constraints are acceptable, although provider support must be checked for lesser-known cloud services
 - Pulumi encourages integrated teams with [T-Shaped specialists](https://en.wikipedia.org/wiki/T-shaped_skills) for the DevOps role
 - The DevOps specialist is familiar with Typescript or Python (or any of the other supported languages, at the cost of a higher risk)
 
@@ -129,6 +130,12 @@ For each tool, I've highlighted the characteristics of projects where I think it
 
 - Longer-term project
 - High to critical risk projects
-- Terraform doesn't impose any constraint on infrastructure requirements
+- Any infrastructure constraint is acceptable
 - Defined boundaries between DevOps engineers and software engineers
 - DevOps engineers are familiar with Terraform and its ecosystem
+
+---
+
+### Rate this article
+
+This is my third article, and your feedback is extremely valuable to me. [Here is a very short survey](https://docs.google.com/forms/d/e/1FAIpQLSdd8pnubGfL-jmsyZFk0JIe1lSKp41rwF8yIcn4TCLRRt4V_w/viewform?usp=header) to share your thoughts.
