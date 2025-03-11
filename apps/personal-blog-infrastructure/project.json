@@ -4,25 +4,23 @@
   "projectType": "application",
   "sourceRoot": "apps/personal-blog-infrastructure/src",
   "tags": [],
+  "implicitDependencies": ["personal-blog"],
   "targets": {
     "deploy": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pulumi up",
-        "cwd": "{projectRoot}"
+        "cwd": "apps/personal-blog-infrastructure"
       },
       "dependsOn": [
-        {
-          "target": "build",
-          "project": "personal-blog"
-        }
+        "^build"
       ]
     },
     "down": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pulumi down",
-        "cwd": "{projectRoot}"
+        "cwd": "apps/infrastructure"
       }
     }
   }
