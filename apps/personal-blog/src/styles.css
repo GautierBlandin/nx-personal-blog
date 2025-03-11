@@ -8,15 +8,15 @@
   }
 
   p {
-    @apply font-paragraph;
+    @apply font-paragraph pb-4;
   }
 
   h1 {
-    @apply text-3xl md:text-5xl font-bold font-title pb-16;
+    @apply text-3xl md:text-5xl font-bold font-title py-12;
   }
 
   h2 {
-    @apply text-2xl md:text-4xl font-bold font-title py-8;
+    @apply text-2xl md:text-4xl font-bold font-title py-6;
   }
 
   h3 {
@@ -40,7 +40,7 @@
   }
 
   ul, ol {
-    @apply pl-10 py-2;
+    @apply pl-10 pb-4;
   }
 
   ul {

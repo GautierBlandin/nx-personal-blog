@@ -42,8 +42,8 @@ module.exports = {
     title: ['Bitter', 'serif'],
   },
   fontSize: {
-    paragraph: '16px',
-    'md-paragraph': '18px',
+    paragraph: '1rem',
+    'md-paragraph': '1.0625rem',
   },
   maxWidth: {
     '8xl': '90rem', // 1440px
