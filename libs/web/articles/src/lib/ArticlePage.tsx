@@ -2,6 +2,7 @@ import { Article } from './Article';
 import { Banner } from './Banner';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
 import React from 'react';
+import { ContentContainer } from '@nx-personal-blog/ui';
 
 export interface ArticlePageProps {
   articleLink: string;
@@ -25,12 +26,10 @@ export const ArticlePage = ({
           <Banner title={title} subtitle={subtitle} />
         </div>
         <div className="flex-grow">
-          <div className="flex justify-center mx-4">
-            <div className="max-w-6xl w-full">
-              <p className="pb-12">Published: {formatDate(publishedAt)}</p>
-              <Article articleLink={articleLink} />
-            </div>
-          </div>
+          <ContentContainer>
+            <p className="pb-12">Published: {formatDate(publishedAt)}</p>
+            <Article articleLink={articleLink} />
+          </ContentContainer>
         </div>
       </main>
     </NavbarLayout>

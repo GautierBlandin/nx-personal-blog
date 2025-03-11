@@ -21,6 +21,7 @@
       "@nx-personal-blog/storybook-host": [
         "libs/web/storybook-host/src/index.ts"
       ],
+      "@nx-personal-blog/ui": ["libs/web/shared/ui/src/index.ts"],
       "@nx-personal-blog/web-articles": ["libs/web/articles/src/index.ts"]
     }
   },
