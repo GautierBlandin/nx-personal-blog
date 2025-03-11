@@ -6,6 +6,14 @@ import { Paragraph } from './paragraph';
 import { List } from './list';
 import { Heading } from './heading';
 import { Separator } from './separator';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from './table';
 
 interface Props {
   content: string;
@@ -21,7 +29,19 @@ export const Markdown: FC<Props> = (props) => {
   return (
     <>
       {Markdoc.renderers.react(content, React, {
-        components: { Paragraph, CodeBlock, List, Heading, Separator },
+        components: {
+          Paragraph,
+          CodeBlock,
+          List,
+          Heading,
+          Separator,
+          Table,
+          TableHeader,
+          TableBody,
+          TableRow,
+          TableHead,
+          TableCell,
+        },
       })}
     </>
   );
