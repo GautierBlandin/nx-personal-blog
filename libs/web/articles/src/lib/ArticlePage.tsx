@@ -9,7 +9,6 @@ export interface ArticlePageProps {
   description: string;
   publishedAt: string;
   subtitle?: string;
-  noBanner?: boolean;
 }
 
 export const ArticlePage = ({
@@ -18,20 +17,19 @@ export const ArticlePage = ({
   description,
   publishedAt,
   subtitle,
-  noBanner,
 }: ArticlePageProps) => {
   return (
     <NavbarLayout title={title} description={description}>
-      {!noBanner && (
+      <main>
         <div className="pb-12">
           <Banner title={title} subtitle={subtitle} />
         </div>
-      )}
-      <main className="flex-grow">
-        <div className="flex justify-center mx-4">
-          <div className="max-w-6xl w-full">
-            <p className="pb-12">Published: {formatDate(publishedAt)}</p>
-            <Article articleLink={articleLink} />
+        <div className="flex-grow">
+          <div className="flex justify-center mx-4">
+            <div className="max-w-6xl w-full">
+              <p className="pb-12">Published: {formatDate(publishedAt)}</p>
+              <Article articleLink={articleLink} />
+            </div>
           </div>
         </div>
       </main>
