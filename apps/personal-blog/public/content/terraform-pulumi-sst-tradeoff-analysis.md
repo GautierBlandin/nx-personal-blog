@@ -94,7 +94,7 @@ Note: For SST, most ratings are given under the assumption that AWS Serverless i
 | High-level APIs             | ★         | ★      | ★★★★  |
 | Documentation quality       | ★★★★★     | ★★★★   | ★★★   |
 | Testability                 | ★★★       | ★★★★★  | ★★★★  |
-| Observability               | ★★★       | ★★★★   | ★★★   |
+| Visibility                  | ★★★       | ★★★★   | ★★★   |
 | Modularity                  | ★★★       | ★★★★★  | ★★★★  |
 | Enterprise-readiness        | ★★★★★     | ★★★★   | ★★    |
 | Secret Management           | ★★★★      | ★★★★★  | ★★★★★ |
