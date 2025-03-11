@@ -97,7 +97,7 @@ Note: For SST, most ratings are given under the assumption that AWS Serverless i
 | Visibility                  | ★★★       | ★★★★   | ★★    |
 | Modularity                  | ★★★       | ★★★★★  | ★★★★  |
 | Enterprise-readiness        | ★★★★★     | ★★★★   | ★★    |
-| Secret Management           | ★★★★      | ★★★★★  | ★★★★★ |
+| Secret Management           | ★★★★      | ★★★★★  | ★★★★  |
 | Auditability                | ★★★       | ★★★★★  | ★     |
 
 ## Choosing the appropriate tool
