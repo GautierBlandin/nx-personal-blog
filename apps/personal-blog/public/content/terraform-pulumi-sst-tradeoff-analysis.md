@@ -1,5 +1,5 @@
-Defining a deployment strategy is a key concern for any new software project. While Infrastructure as Code (IaC) has become the industry standard for provisioning and managing cloud infrastructure, the growing ecosystem of tools makes
-selecting the optimal solution increasingly challenging.
+Defining a deployment strategy is a key concern for any new software project. While Infrastructure as Code (IaC) has become the industry standard for provisioning and managing cloud infrastructure, **the growing ecosystem of tools makes
+selecting the optimal solution increasingly challenging**.
 
 In this article, I look at three popular tools for writing infrastructure code and which one I would recommend based on the circumstances of the project. First though, let's start with some basics.
 
@@ -15,7 +15,7 @@ Just like there many programming languages were created over time to address evo
 - Developer experience (deployment speed, local development capabilities, language syntax familiarity)
 - Modularity (ability to define and reuse infrastructure components)
 - Testability
-- Observability (monitoring of deployed resources, deployment metrics)
+- Visibility (monitoring of deployed resources, deployment metrics)
 - Security (secret management, compliance checking, auditability)
 
 ## Terraform
@@ -26,14 +26,15 @@ providers and benefits from a widespread adoption in the DevOps community. Terra
 track the real-world resources to determine what changes are needed during deployments.
 
 #### Strengths
-- Being used by many large organisations, Terraform has demonstrated enterprise-readiness and is a proven technology.
-- Terraform supports virtually all cloud providers, making it one of the most versatile IaC tools.
+- Being used by many large organisations, **Terraform has demonstrated enterprise-readiness** and is a proven technology.
+- **Terraform supports virtually all cloud providers**, making it one of the most versatile IaC tools.
 - The official documentation is comprehensive, with a wealth of examples and tutorials.
 - Terraform has an active community and a large adoption, making experienced practitioners easier to find. Additionally, HashiCorp offers certifications that may help in the vetting process.
+- Terraform Cloud provides visibility and security features at a competitive price point.
 
 #### Challenges
 
-- Terraform requires the use of HCL and specialized Terraform-specific knowledge and tooling. This encourages a Software Engineer vs DevOps Specialist divide, which is increasingly seen as hindering productivity, especially in smaller
+- Terraform requires the use of HCL and specialized Terraform-specific knowledge and tooling. **This encourages a Software Engineer vs DevOps Specialist divide**, which is increasingly seen as hindering productivity, especially in smaller
   teams.
 - Terraform code is harder to keep DRY, and HCL sometimes lacks useful features available in more expressive programming languages.
 
@@ -44,13 +45,13 @@ wide variety of cloud providers, and benefits from a growing popularity. It also
 
 #### Strengths
 
-- By supporting mainstream programming languages, Pulumi encourages tighter integration of DevOps practices in fullstack teams. Language familiarity facilitates software engineers taking part in infrastructure definition. 
+- By supporting mainstream programming languages, **Pulumi encourages tighter integration of DevOps practices in fullstack teams**. Language familiarity facilitates software engineers taking part in infrastructure definition. 
 - The use of programming languages enables powerful developer tooling advantages, including IDE support and strong static typing.
 - High testability with both unit testing, property testing, and integration testing being available.
-- High modularity through native language constructs, as code reuse is powered by the full spectrum of abstraction techniques available in modern programming.
+- High modularity through native language constructs, as **code reuse is powered by the full spectrum of abstraction techniques available in modern programming**.
 - Although less extensive than Terraform's provider ecosystem, Pulumi supports a wide array of cloud providers. Additionally, Terraform providers can be bridged to be usence, and compositid with Pulumi and provide missing functionality.
-- Secrets can be securely encrypted directly in state files, rather than stored in a separate secrets management service.
-- Pulumi Cloud provides strong observability and auditability features.
+- Secrets are encrypted at rest in state files.
+- Pulumi Cloud provides advanced visibility and security features, albeit at a higher price point compared to Terraform Cloud.
 
 #### Challenges
 
@@ -58,7 +59,7 @@ wide variety of cloud providers, and benefits from a growing popularity. It also
   examples to figure out how to do things.
 - The high flexibility provided by programming languages makes it easier for teams with a weaker software engineering culture to shoot themselves in the foot and write hard-to-maintain code.
 - All languages supported by Pulumi have feature-parity, but users reports a smoother experience with Typescript and Python, especially on the documentation side.
-- Experienced practitioners may be harder to find and vet compared to Terraform.
+- **Experienced practitioners may be harder to find and vet** compared to Terraform.
 
 ## SST
 
@@ -71,7 +72,7 @@ SST uses the Pulumi engine under the hood to manage and provision resources, and
 
 #### Strengths
 
-- Opinionated, high-level APIs that dramatically reduce development effort for supported patterns.
+- **Opinionated, high-level APIs that dramatically reduce development effort for supported patterns.**
 - Hot-reload for lambda functions provide a very fast feedback loop for serverless backend developers.
 
 #### Challenges
@@ -113,8 +114,8 @@ For each tool, I've highlighted the characteristics of projects where I think it
 ### SST
 
 - Shorter-term project
-- Low risk project (prototyping, early-stage startups)
-- Mostly sticking to AWS Serverless is an acceptable constraint
+- **Low risk project (prototyping, early-stage startups)**
+- **Mostly sticking to AWS Serverless is an acceptable constraint**
 - Small, tightly integrated team
 - The team is familiar with Typescript
 
