@@ -43,6 +43,16 @@ export function articleToArticlePageProps(article: Article): ArticlePageProps {
   };
 }
 
+export function fullTitle({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle?: string;
+}): string {
+  return subtitle ? `${title} - ${subtitle}` : title;
+}
+
 export function articleContentPath(articleIdentifier: string) {
   return `/content/${articleIdentifier}.md`;
 }
