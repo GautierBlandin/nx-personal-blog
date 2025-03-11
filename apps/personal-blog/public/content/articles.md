@@ -1,6 +1,6 @@
 #### 2025
 
-- [Terraform vs Pulumi vs SST: A Tradeoffs analysis](/articles/terraform-pulumi-sst-tradeoff-analysis)
+- [Terraform vs Pulumi vs SST - A tradeoffs analysis](/articles/terraform-pulumi-sst-tradeoff-analysis)
 
 #### 2024
 
