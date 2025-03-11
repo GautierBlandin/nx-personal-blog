@@ -8,7 +8,7 @@ In this article, I look at three popular tools for writing infrastructure code a
 Infrastructure as Code is the process of provisioning and managing cloud resources through machine-readable files, enabling automated and replicable pipelines, as opposed to a manual deployment process. IaC provides many benefits:
 consistent and reproducible deployments, reduced risk of human error, version control with all its advantages, living documentation of the infrastructure through the code itself, and many more.
 
-Just like there many programming languages were created over time to address evolving needs, several tools emerged over the years to provide IaC capabilities. Key concerns for assessing IaC tools include:
+Just like many programming languages were created over time to address evolving needs, several tools emerged over the years to provide IaC capabilities. Key concerns for assessing IaC tools include:
 
 - Variety of cloud of provider support
 - Ecosystem maturity (quality of documentation and training material, integration capabilities)
