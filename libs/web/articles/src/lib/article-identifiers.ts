@@ -38,6 +38,7 @@ export function articleToArticlePageProps(article: Article): ArticlePageProps {
     articleLink: articleContentPath(article.identifier),
     title: article.title,
     subtitle: article.subtitle,
+    publishedAt: article.date,
     description: article.description,
   };
 }
