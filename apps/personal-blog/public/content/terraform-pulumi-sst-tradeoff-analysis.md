@@ -63,8 +63,8 @@ wide variety of cloud providers, and benefits from a growing popularity. It also
 
 ## SST
 
-SST was created in 2020 and is fundamentally different from Terraform and Pulumi in what it tries to achieve. Where Terraform and Pulumi fulfill a similar purpose using different approaches, SST is narrowly focused on AWS serverless
-services and aims at improving development speed by providing high-level, opinionated APIs for provisioning cloud resources. For example, while deploying a server-side rendered application using Next or Remix might take a significant
+SST was created in 2020 and is fundamentally different from Terraform and Pulumi in what it tries to achieve. Where Terraform and Pulumi fulfill a similar purpose using different approaches, **SST is narrowly focused on AWS serverless
+services and aims at improving development speed by providing high-level, opinionated APIs** for provisioning cloud resources. For example, while deploying a server-side rendered application using Next or Remix might take a significant
 amount of engineering effort and infrastructure code using low-level components through Terraform or Pulumi, SST treats it as a single declarable resource. Additionally, SST comes with a powerful Live Lambda feature, enabling hot-reload
 of AWS Lambda functions during development by proxying calls to a local deployment.
 
