@@ -18,9 +18,6 @@
     "paths": {
       "@nx-personal-blog/home": ["libs/web/home/src/index.ts"],
       "@nx-personal-blog/navigation": ["libs/web/navigation/src/index.ts"],
-      "@nx-personal-blog/storybook-host": [
-        "libs/web/storybook-host/src/index.ts"
-      ],
       "@nx-personal-blog/ui": ["libs/web/shared/ui/src/index.ts"],
       "@nx-personal-blog/web-articles": ["libs/web/articles/src/index.ts"]
     }
