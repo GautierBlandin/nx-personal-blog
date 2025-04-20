@@ -20,6 +20,9 @@
     },
     {
       "path": "./libs/web/shared/ui"
+    },
+    {
+      "path": "./personal-blog-ssr"
     }
   ]
 }

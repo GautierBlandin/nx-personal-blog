@@ -1,3 +1,4 @@
 {
-  "name": "personal-blog"
+  "name": "personal-blog",
+  "type": "module"
 }
