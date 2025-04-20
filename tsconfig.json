@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/personal-blog"
+    },
+    {
+      "path": "./apps/personal-blog-infrastructure"
+    },
+    {
+      "path": "./libs/web/articles"
+    },
+    {
+      "path": "./libs/web/home"
+    },
+    {
+      "path": "./libs/web/navigation"
+    },
+    {
+      "path": "./libs/web/shared/ui"
+    }
+  ]
+}

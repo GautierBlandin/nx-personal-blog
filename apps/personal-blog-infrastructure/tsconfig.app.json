@@ -1,8 +1,14 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
-    "types": ["node"]
+    "outDir": "dist",
+    "allowJs": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "types": ["node"],
+    "rootDir": ".",
+    "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
   },
   "exclude": [
     "jest.config.ts",
