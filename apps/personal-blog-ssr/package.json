@@ -1,0 +1,10 @@
+{
+  "name": "@nx-personal-blog/personal-blog-ssr",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=20"
+  },
+  "sideEffects": false
+}

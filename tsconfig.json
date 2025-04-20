@@ -22,7 +22,7 @@
       "path": "./libs/web/shared/ui"
     },
     {
-      "path": "./personal-blog-ssr"
+      "path": "./apps/personal-blog-ssr"
     }
   ]
 }
