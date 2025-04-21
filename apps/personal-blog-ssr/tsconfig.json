@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/static/articles"
+    },
+    {
       "path": "../../libs/web/articles"
     },
     {
