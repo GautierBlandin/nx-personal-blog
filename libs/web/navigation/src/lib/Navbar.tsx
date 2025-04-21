@@ -7,7 +7,7 @@ export const Navbar = () => {
         <h5>Home</h5>
       </NavLink>
       <NavLink
-        to="/articles"
+        to="/articles/"
         className={`text-neutral-emphasis hover:underline`}
       >
         <h5>Articles</h5>
