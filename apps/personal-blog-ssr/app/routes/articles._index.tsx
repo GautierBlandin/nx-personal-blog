@@ -1,5 +1,5 @@
 import { ArticlesPage } from '@nx-personal-blog/web-articles';
 
-export default function ArticlesIndex() {
+export default function ArticlesRoot() {
   return <ArticlesPage />;
 }

@@ -1,7 +1,6 @@
-import { Article } from './Article';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
-import React from 'react';
 import { ContentContainer } from '@nx-personal-blog/ui';
+import { Article } from './Article';
 
 export const ArticlesPage = () => {
   return (
