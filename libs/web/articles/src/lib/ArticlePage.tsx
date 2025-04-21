@@ -1,7 +1,6 @@
 import { Article } from './Article';
 import { Banner } from './Banner';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
-import React from 'react';
 import { ContentContainer } from '@nx-personal-blog/ui';
 import { fullTitle } from './article-identifiers';
 
