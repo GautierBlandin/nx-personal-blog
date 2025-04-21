@@ -1,10 +1,11 @@
 import { articleRoute, articles } from '@nx-personal-blog/web-articles';
-import { NavbarLayout } from '@nx-personal-blog/navigation';
 import { ContentContainer } from '@nx-personal-blog/ui';
+import { Navbar } from '@nx-personal-blog/navigation';
 
 export function Home() {
   return (
-    <NavbarLayout>
+    <div className="flex flex-col min-h-screen pb-16">
+      <Navbar />
       <main className="flex-grow">
         <ContentContainer>
           <div>
@@ -52,6 +53,6 @@ export function Home() {
           </div>
         </ContentContainer>
       </main>
-    </NavbarLayout>
+    </div>
   );
 }
