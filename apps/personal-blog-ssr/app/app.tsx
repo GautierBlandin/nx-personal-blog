@@ -1,11 +1,7 @@
-import NxWelcome from './nx-welcome';
+import { Home } from '@nx-personal-blog/home';
 
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="@nx-personal-blog/personal-blog-ssr" />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;

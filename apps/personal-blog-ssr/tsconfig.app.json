@@ -34,7 +34,7 @@
     "tests/**/*.spec.jsx",
     "tests/**/*.test.jsx",
     "vite.config.ts",
-    "vite.config.mts",
+    "vite.config.ts",
     "vitest.config.ts",
     "vitest.config.mts",
     "src/**/*.test.ts",
@@ -48,5 +48,10 @@
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
+  ],
+  "references": [
+    {
+      "path": "../../libs/web/home/tsconfig.lib.json"
+    }
   ]
 }

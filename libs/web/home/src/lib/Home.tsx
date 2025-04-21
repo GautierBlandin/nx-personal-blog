@@ -1,6 +1,5 @@
 import { articleRoute, articles } from '@nx-personal-blog/web-articles';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
-import React from 'react';
 import { ContentContainer } from '@nx-personal-blog/ui';
 
 export function Home() {

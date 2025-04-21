@@ -1,4 +1,4 @@
 {
   "name": "personal-blog",
-  "type": "module"
+  "type": "commonjs"
 }

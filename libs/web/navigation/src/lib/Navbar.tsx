@@ -1,26 +1,17 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router';
 
 export const Navbar = () => {
-  const location = useLocation();
-
   return (
     <nav className="flex justify-center space-x-8 py-3">
-      <Link
-        to="/"
-        className={`text-neutral-emphasis hover:underline ${
-          location.pathname === '/' ? 'underline' : ''
-        }`}
-      >
+      <NavLink to="/" className={`text-neutral-emphasis hover:underline`}>
         <h5>Home</h5>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/articles"
-        className={`text-neutral-emphasis hover:underline ${
-          location.pathname === '/articles' ? 'underline' : ''
-        }`}
+        className={`text-neutral-emphasis hover:underline`}
       >
         <h5>Articles</h5>
-      </Link>
+      </NavLink>
     </nav>
   );
 };
