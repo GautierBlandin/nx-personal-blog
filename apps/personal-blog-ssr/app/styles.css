@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply text-paragraph md:text-md-paragraph;
+    }
+
+    p {
+        @apply font-paragraph pb-4;
+    }
+
+    h1 {
+        @apply text-3xl md:text-5xl font-bold font-title py-12;
+    }
+
+    h2 {
+        @apply text-2xl md:text-4xl font-bold font-title py-6;
+    }
+
+    h3 {
+        @apply text-2xl md:text-3xl font-bold font-title py-4;
+    }
+
+    h4 {
+        @apply text-xl md:text-2xl font-bold font-title py-4;
+    }
+
+    h5 {
+        @apply text-xl font-bold font-title py-4;
+    }
+
+    h6 {
+        @apply text-xl font-bold font-title py-4;
+    }
+
+    hr {
+        @apply w-1/5 mt-8 border-gray-700;
+    }
+
+    ul, ol {
+        @apply pl-10 pb-4;
+    }
+
+    ul {
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    li {
+        @apply font-paragraph;
+    }
+
+    a {
+        @apply text-blue-700;
+    }
+
+    a:hover {
+        @apply underline;
+    }
+
+    /* Table styling */
+    table {
+        @apply w-full my-4 border-collapse font-paragraph;
+    }
+
+    thead {
+        @apply bg-gray-100;
+    }
+
+    th {
+        @apply px-4 py-3 border border-gray-300 text-left font-bold text-xl;
+    }
+
+    td {
+        @apply px-4 py-2 border border-gray-300;
+    }
+
+    tbody tr:nth-child(even) {
+        @apply bg-gray-50;
+    }
+
+    tbody tr:hover {
+        @apply bg-gray-100;
+    }
+}
