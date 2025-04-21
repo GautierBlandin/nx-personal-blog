@@ -23,6 +23,9 @@
     },
     {
       "path": "./apps/personal-blog-ssr"
+    },
+    {
+      "path": "./libs/static/articles"
     }
   ]
 }

@@ -102,6 +102,7 @@
     "apps/*",
     "libs/web/*",
     "libs/web/shared/*",
-    "personal-blog-ssr"
+    "personal-blog-ssr",
+    "libs/static/*"
   ]
 }

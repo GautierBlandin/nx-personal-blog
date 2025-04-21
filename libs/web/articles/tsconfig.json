@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../static/articles"
+    },
+    {
       "path": "../shared/ui"
     },
     {
