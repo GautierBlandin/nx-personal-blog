@@ -51,6 +51,9 @@
   ],
   "references": [
     {
+      "path": "../../libs/web/articles/tsconfig.lib.json"
+    },
+    {
       "path": "../../libs/web/home/tsconfig.lib.json"
     }
   ]
