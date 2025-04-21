@@ -12,6 +12,6 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "sourceRoot": "libs/web/articles/home"
+    "sourceRoot": "libs/web/home/src"
   }
 }

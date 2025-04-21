@@ -12,6 +12,6 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "sourceRoot": "libs/web/articles/navigation"
+    "sourceRoot": "libs/web/navigation/src"
   }
 }
