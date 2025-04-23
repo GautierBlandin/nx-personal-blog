@@ -31,7 +31,7 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["libs/static/articles/*"]
+      "exclude": ["libs/static/articles/*", "libs/server/articles/*"]
     },
     {
       "plugin": "@nx/vite/plugin",
@@ -84,7 +84,7 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["libs/static/articles/*"],
+      "include": ["libs/static/articles/*", "libs/server/articles/*"],
       "options": {
         "typecheck": {
           "targetName": "typecheck"

@@ -26,6 +26,9 @@
     },
     {
       "path": "./libs/static/articles"
+    },
+    {
+      "path": "./libs/server/articles"
     }
   ]
 }

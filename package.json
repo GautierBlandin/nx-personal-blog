@@ -103,6 +103,7 @@
     "libs/web/*",
     "libs/web/shared/*",
     "personal-blog-ssr",
-    "libs/static/*"
+    "libs/static/*",
+    "libs/server/*"
   ]
 }

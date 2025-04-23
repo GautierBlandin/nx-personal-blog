@@ -1,5 +1,5 @@
 {
-  "name": "@nx-personal-blog/articles",
+  "name": "@nx-personal-blog/static-articles",
   "version": "0.0.1",
   "private": true,
   "type": "module",

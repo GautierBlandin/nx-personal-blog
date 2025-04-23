@@ -1,6 +1,6 @@
 import { ArticlesPage } from '@nx-personal-blog/web-articles';
 import { useLoaderData } from 'react-router';
-import { loadArticleContent } from '@nx-personal-blog/articles';
+import { loadArticleContent } from '@nx-personal-blog/server-articles';
 
 export async function loader() {
   return {
