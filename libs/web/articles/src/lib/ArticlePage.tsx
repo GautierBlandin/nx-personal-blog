@@ -2,7 +2,7 @@ import { Article } from './Article';
 import { Banner } from './Banner';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
 import { ContentContainer } from '@nx-personal-blog/ui';
-import { fullTitle } from './article-identifiers';
+import { fullTitle } from '@nx-personal-blog/static-articles';
 
 export interface ArticlePageProps {
   articleLink: string;

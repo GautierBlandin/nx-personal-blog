@@ -9,7 +9,7 @@
       "path": "../navigation"
     },
     {
-      "path": "../articles"
+      "path": "../../static/articles"
     },
     {
       "path": "./tsconfig.lib.json"

@@ -1,4 +1,4 @@
-import { articleRoute, articles } from '@nx-personal-blog/web-articles';
+import { articleRoute, articles } from '@nx-personal-blog/static-articles';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
 import { ContentContainer } from '@nx-personal-blog/ui';
 

@@ -47,7 +47,7 @@
       "path": "../navigation/tsconfig.lib.json"
     },
     {
-      "path": "../articles/tsconfig.lib.json"
+      "path": "../../static/articles/tsconfig.lib.json"
     }
   ]
 }
