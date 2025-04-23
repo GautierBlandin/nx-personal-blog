@@ -1,1 +1,1 @@
-export { loadArticleContent } from './lib/articles.js';
+export { loadArticleContent } from './lib/load-article-content.js';
