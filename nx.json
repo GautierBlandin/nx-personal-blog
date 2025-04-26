@@ -30,8 +30,7 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
-      },
-      "exclude": ["libs/static/articles/*", "libs/server/articles/*"]
+      }
     },
     {
       "plugin": "@nx/vite/plugin",
@@ -80,16 +79,8 @@
         "watchDepsTargetName": "watch-deps",
         "buildDepsTargetName": "build-deps",
         "typecheckTargetName": "typecheck"
-      }
-    },
-    {
-      "plugin": "@nx/js/typescript",
-      "include": ["libs/static/articles/*", "libs/server/articles/*"],
-      "options": {
-        "typecheck": {
-          "targetName": "typecheck"
-        }
-      }
+      },
+      "exclude": ["libs/*"]
     }
   ],
   "targetDefaults": {

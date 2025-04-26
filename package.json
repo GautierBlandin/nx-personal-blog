@@ -84,6 +84,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jiti": "2.4.2",
     "jsdom": "~22.1.0",
+    "jsonc-eslint-parser": "^2.1.0",
     "nx": "20.8.0",
     "postcss": "8.4.38",
     "prettier": "^2.6.2",
@@ -104,6 +105,7 @@
     "libs/web/shared/*",
     "personal-blog-ssr",
     "libs/static/*",
-    "libs/server/*"
+    "libs/server/*",
+    "libs/*"
   ]
 }
