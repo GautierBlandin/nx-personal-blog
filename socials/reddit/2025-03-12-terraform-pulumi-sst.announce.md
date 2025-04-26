@@ -10,7 +10,7 @@ I hope you find it interesting !
 r/typescript
 
 I've been looking at the different options we have for IaC tools lately. Typescript is getting more and more love, and I believe that as fullstack developers, being competent at writing infrastructure code is a really important skill to 
-develop ! After experiencing and researching for a while, I've decided to summarize my experience in a blog article, which you can find here: https://www.gautierblandin.com/articles/terraform-pulumi-sst-tradeoff-analysis.
+develop ! After experiencing and researching for a while, I've summarized my experience in a blog article, which you can find here: https://www.gautierblandin.com/articles/terraform-pulumi-sst-tradeoff-analysis.
 
 I hope you find it interesting !
 

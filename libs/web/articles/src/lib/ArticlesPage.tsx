@@ -1,9 +1,8 @@
-import { Article } from './Article';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
-import React from 'react';
 import { ContentContainer } from '@nx-personal-blog/ui';
+import { Markdown } from './Markdown';
 
-export const ArticlesPage = () => {
+export const ArticlesPage = ({ content }: { content: string }) => {
   return (
     <NavbarLayout
       title="Gautier Blandin - A blog about software engineering"
@@ -11,7 +10,7 @@ export const ArticlesPage = () => {
     >
       <main className="flex-grow">
         <ContentContainer>
-          <Article articleLink="/content/articles.md" />
+          <Markdown content={content} />
         </ContentContainer>
       </main>
     </NavbarLayout>

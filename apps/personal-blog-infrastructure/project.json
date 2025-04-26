@@ -4,7 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/personal-blog-infrastructure/src",
   "tags": [],
-  "implicitDependencies": ["personal-blog"],
+  "implicitDependencies": ["@nx-personal-blog/personal-blog-ssr"],
   "targets": {
     "deploy": {
       "executor": "nx:run-commands",

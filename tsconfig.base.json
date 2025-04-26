@@ -1,29 +1,21 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "composite": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
     "importHelpers": true,
-    "allowJs": true,
-    "target": "es2020",
+    "isolatedModules": true,
+    "lib": ["es2022"],
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "moduleResolution": "bundler",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@nx-personal-blog/home": ["libs/web/home/src/index.ts"],
-      "@nx-personal-blog/navigation": ["libs/web/navigation/src/index.ts"],
-      "@nx-personal-blog/storybook-host": [
-        "libs/web/storybook-host/src/index.ts"
-      ],
-      "@nx-personal-blog/ui": ["libs/web/shared/ui/src/index.ts"],
-      "@nx-personal-blog/web-articles": ["libs/web/articles/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+    "strict": true,
+    "target": "es2022",
+    "customConditions": ["development"]
+  }
 }

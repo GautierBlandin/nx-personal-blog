@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 
 interface HeadingProps {
   children: React.ReactNode;
@@ -6,7 +6,11 @@ interface HeadingProps {
   className?: string;
 }
 
-export const Heading: React.FC<HeadingProps> = ({ children, level, className }) => {
+export const Heading: React.FC<HeadingProps> = ({
+  children,
+  level,
+  className,
+}) => {
   const Component = `h${level}` as keyof JSX.IntrinsicElements;
 
   return <Component className={className}>{children}</Component>;

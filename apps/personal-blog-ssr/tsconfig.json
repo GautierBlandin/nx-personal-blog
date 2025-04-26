@@ -1,0 +1,30 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../libs/static/articles"
+    },
+    {
+      "path": "../../libs/server/articles"
+    },
+    {
+      "path": "../../libs/web/articles"
+    },
+    {
+      "path": "../../libs/web/home"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "types": ["@react-router/node"]
+  }
+}

@@ -1,12 +1,11 @@
-import { Article } from './Article';
 import { Banner } from './Banner';
 import { NavbarLayout } from '@nx-personal-blog/navigation';
-import React from 'react';
 import { ContentContainer } from '@nx-personal-blog/ui';
-import { fullTitle } from './article-identifiers';
+import { fullTitle } from '@nx-personal-blog/static-articles';
+import { Markdown } from './Markdown';
 
 export interface ArticlePageProps {
-  articleLink: string;
+  content: string;
   title: string;
   description: string;
   publishedAt: string;
@@ -15,7 +14,7 @@ export interface ArticlePageProps {
 
 export const ArticlePage = ({
   title,
-  articleLink,
+  content,
   description,
   publishedAt,
   subtitle,
@@ -32,7 +31,7 @@ export const ArticlePage = ({
         <div className="flex-grow">
           <ContentContainer>
             <p className="pb-12">Published: {formatDate(publishedAt)}</p>
-            <Article articleLink={articleLink} />
+            <Markdown content={content} />
           </ContentContainer>
         </div>
       </main>

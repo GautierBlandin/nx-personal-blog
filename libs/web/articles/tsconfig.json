@@ -1,14 +1,16 @@
 {
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "allowJs": false,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true
-  },
   "files": [],
   "include": [],
   "references": [
+    {
+      "path": "../../static/articles"
+    },
+    {
+      "path": "../shared/ui"
+    },
+    {
+      "path": "../navigation"
+    },
     {
       "path": "./tsconfig.lib.json"
     },

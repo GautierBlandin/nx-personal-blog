@@ -1,8 +1,10 @@
 import { CheckIcon, ClipboardIcon } from 'lucide-react';
 import { FC, memo, useEffect, useState } from 'react';
 import { Prism } from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import prismStyle from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Button } from './button';
+
+const { darcula } = prismStyle;
 
 export const fence = {
   render: 'CodeBlock',
@@ -66,7 +68,12 @@ export const CodeBlock: FC<Props> = memo(({ language, children }) => {
         {isIconChecked ? <CheckIcon size={16} /> : <ClipboardIcon size={16} />}
       </Button>
 
-      <Prism language={language} style={customStyle} PreTag="pre" className="rounded-md">
+      <Prism
+        language={language}
+        style={customStyle}
+        PreTag="pre"
+        className="rounded-md"
+      >
         {children}
       </Prism>
     </div>
