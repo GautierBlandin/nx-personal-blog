@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router';
+import { useLoaderData, MetaFunction } from 'react-router';
 import { ArticlePage } from '@nx-personal-blog/web-articles';
 import { articles } from '@nx-personal-blog/static-articles';
 import { loadArticleContent } from '@nx-personal-blog/server-articles';
@@ -21,6 +21,13 @@ export async function loader({ params }: { params: { identifier: string } }) {
     content,
   };
 }
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  return [
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    { title: (data as any).title },
+  ];
+};
 
 export default function ArticleRoute() {
   const articleProps = useLoaderData<typeof loader>();
