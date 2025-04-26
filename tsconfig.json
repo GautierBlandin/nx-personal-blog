@@ -7,9 +7,6 @@
       "path": "./apps/personal-blog"
     },
     {
-      "path": "./apps/personal-blog-infrastructure"
-    },
-    {
       "path": "./libs/web/articles"
     },
     {
@@ -29,9 +26,6 @@
     },
     {
       "path": "./libs/server/articles"
-    },
-    {
-      "path": "./libs/buildable"
     }
   ]
 }
