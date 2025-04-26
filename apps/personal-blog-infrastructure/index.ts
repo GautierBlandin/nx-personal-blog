@@ -123,8 +123,33 @@ const cloudfrontOAC = new aws.cloudfront.OriginAccessControl('cloudfrontOAC', {
 
 const cachingDisabledPolicyId = '4135ea2d-6df8-44a3-9df3-4b5a84be39ad';
 const cachingOptimizedPolicyId = '658327ea-f89d-4fab-a63d-7e88639e58f6';
-// const allViewerExceptHostHeaderPolicyId =
-//   'b689b0a8-53d0-40ab-baf2-68738e2966ac';
+const cachePolicyId =
+  stack === PRODUCTION ? cachingOptimizedPolicyId : cachingDisabledPolicyId;
+
+// Create a CloudFront function for index.html redirects
+const indexRedirectFunction = new aws.cloudfront.Function(
+  'indexRedirectFunction',
+  {
+    name: 'index-redirect',
+    runtime: 'cloudfront-js-1.0',
+    code: `function handler(event) {
+    var request = event.request;
+    var uri = request.uri;
+    
+    // If URI ends with '/', append 'index.html'
+    if (uri.endsWith('/')) {
+        request.uri = uri + 'index.html';
+    }
+    // If URI doesn't end with '/' or '.html', append '/index.html'
+    else if (!uri.includes('.')) {
+        request.uri = uri + '/index.html';
+    }
+    
+    return request;
+}`,
+    publish: true,
+  }
+);
 
 // Create a CloudFront distribution
 const distribution = new aws.cloudfront.Distribution(
@@ -145,24 +170,17 @@ const distribution = new aws.cloudfront.Distribution(
       viewerProtocolPolicy: 'redirect-to-https',
       allowedMethods: ['GET', 'HEAD', 'OPTIONS'],
       cachedMethods: ['GET', 'HEAD', 'OPTIONS'],
-      cachePolicyId:
-        stack === PRODUCTION
-          ? cachingOptimizedPolicyId
-          : cachingDisabledPolicyId,
+      cachePolicyId,
       minTtl: 0,
       defaultTtl: 300,
       maxTtl: 1200,
+      functionAssociations: [
+        {
+          eventType: 'viewer-request',
+          functionArn: indexRedirectFunction.arn,
+        },
+      ],
     },
-
-    customErrorResponses: [
-      {
-        errorCode: 403,
-        responseCode: 200,
-        responsePagePath: '/index.html',
-        errorCachingMinTtl: 300,
-      },
-    ],
-
     restrictions: {
       geoRestriction: {
         restrictionType: 'none',
