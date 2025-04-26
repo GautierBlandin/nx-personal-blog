@@ -4,16 +4,9 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  type MetaFunction,
   type LinksFunction,
 } from 'react-router';
 import styles from './styles.css?url';
-
-export const meta: MetaFunction = () => [
-  {
-    title: 'New Nx React Router App',
-  },
-];
 
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -45,7 +38,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <title>Gautier Blandin - A blog about software engineering</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

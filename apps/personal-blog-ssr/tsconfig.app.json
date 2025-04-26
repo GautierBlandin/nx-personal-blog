@@ -7,12 +7,15 @@
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true,
+    "moduleResolution": "bundler",
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "rootDir": "app",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
   },
   "include": [
+    "react-router.config.ts",
+    "vite.config.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
     "app/**/*.js",

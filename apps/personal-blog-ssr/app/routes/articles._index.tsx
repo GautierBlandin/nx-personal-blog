@@ -1,6 +1,12 @@
 import { ArticlesPage } from '@nx-personal-blog/web-articles';
-import { useLoaderData } from 'react-router';
+import { type MetaFunction, useLoaderData } from 'react-router';
 import { loadArticleContent } from '@nx-personal-blog/server-articles';
+
+export const meta: MetaFunction = () => [
+  {
+    title: 'Gautier Blandin - Articles',
+  },
+];
 
 export async function loader() {
   return {
