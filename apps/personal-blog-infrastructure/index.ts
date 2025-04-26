@@ -52,11 +52,13 @@ const cachingOptimizedPolicyId = '658327ea-f89d-4fab-a63d-7e88639e58f6';
 const cachePolicyId =
   stack === PRODUCTION ? cachingOptimizedPolicyId : cachingDisabledPolicyId;
 
+const functionName = pulumi.interpolate`index-redirect-${aws.config.region}-${stack}`;
+
 // Create a CloudFront function for index.html redirects
 const indexRedirectFunction = new aws.cloudfront.Function(
   'indexRedirectFunction',
   {
-    name: 'index-redirect',
+    name: functionName,
     runtime: 'cloudfront-js-1.0',
     code: `function handler(event) {
     var request = event.request;
@@ -107,6 +109,14 @@ const distribution = new aws.cloudfront.Distribution(
         },
       ],
     },
+    customErrorResponses: [
+      {
+        errorCode: 403,
+        responseCode: 200,
+        responsePagePath: '/index.html',
+        errorCachingMinTtl: 300,
+      },
+    ],
     restrictions: {
       geoRestriction: {
         restrictionType: 'none',
